@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N.O.V.A. 2026 Team Portfolio</title>
+<meta name="description" content="LLM, RAG, AI Agent, 데이터 분석 경험을 바탕으로 근거 기반 의사결정 에이전트를 만드는 팀 포트폴리오">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap');
+:root{
+  --bg:#f6f8fb; --ink:#17202d; --muted:#657084; --line:#e5e9f0;
+  --navy:#132238; --blue:#3157d5; --sky:#eaf0ff; --card:#fff; --green:#187b66;
+  --max:1120px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:20;background:rgba(246,248,251,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(229,233,240,.8)}
+.navin{max-width:var(--max);margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;letter-spacing:-.03em}.brand span{color:var(--blue)}
+.links{display:flex;gap:22px;font-size:14px;color:var(--muted);font-weight:600}
+.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+.hero{padding:96px 0 72px;display:grid;grid-template-columns:1.25fr .75fr;gap:54px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;background:var(--sky);color:var(--blue);font-size:13px;font-weight:700}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--blue)}
+h1{font-size:58px;line-height:1.08;letter-spacing:-.055em;margin:22px 0 22px}
+.lead{font-size:20px;color:var(--muted);max-width:720px;letter-spacing:-.02em}
+.hero-card{background:var(--navy);color:white;border-radius:28px;padding:34px;box-shadow:0 24px 60px rgba(19,34,56,.18)}
+.hero-card small{color:#aebbd0;font-weight:600}.hero-card h3{font-size:25px;line-height:1.35;margin:12px 0 24px;letter-spacing:-.03em}
+.flow{display:grid;gap:10px}.flow div{padding:12px 14px;border:1px solid rgba(255,255,255,.14);border-radius:13px;background:rgba(255,255,255,.06);font-size:14px}
+.flow b{color:#a9c0ff;margin-right:8px}
+section{padding:72px 0}
+.kicker{font-size:13px;color:var(--blue);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+h2{font-size:38px;letter-spacing:-.045em;line-height:1.2;margin:10px 0 16px}
+.desc{color:var(--muted);font-size:17px;max-width:780px;margin-bottom:34px}
+.thesis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.thesis .item,.project,.stat,.stackbox{background:var(--card);border:1px solid var(--line);border-radius:20px}
+.thesis .item{padding:24px}.num{font-size:13px;color:var(--blue);font-weight:800}.thesis h3{font-size:19px;margin:9px 0 7px}.thesis p{margin:0;color:var(--muted);font-size:14px}
+.banner{margin-top:18px;background:linear-gradient(135deg,#17263c,#22385a);border-radius:24px;padding:30px;color:white;display:flex;gap:28px;align-items:center;justify-content:space-between}
+.banner strong{font-size:22px;letter-spacing:-.03em}.banner p{margin:6px 0 0;color:#c1cada;font-size:14px;max-width:700px}
+.pill{white-space:nowrap;padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.1);font-size:12px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.project{padding:28px;display:flex;flex-direction:column;min-height:330px;transition:.2s ease}
+.project:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(35,52,77,.08)}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}.tag{font-size:12px;font-weight:700;color:#4f5f76;background:#f0f3f8;padding:6px 9px;border-radius:8px}
+.project h3{font-size:24px;letter-spacing:-.035em;margin:0 0 10px}.project p{color:var(--muted);font-size:14px;margin:0 0 15px}
+.bullets{padding:0;margin:0;list-style:none}.bullets li{position:relative;padding-left:17px;margin:7px 0;font-size:14px}.bullets li:before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.linkrow{margin-top:auto;padding-top:18px;display:flex;gap:14px;font-size:13px;font-weight:700;color:var(--blue)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.stat{padding:22px}.stat b{display:block;font-size:27px;letter-spacing:-.04em}.stat span{color:var(--muted);font-size:12px}
+.agent{background:#eef3ff;border:1px solid #dce5ff;border-radius:28px;padding:38px}
+.agent-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:center}
+.loop{display:grid;grid-template-columns:1fr 1fr;gap:10px}.loop div{background:white;border:1px solid #dfe6f4;border-radius:14px;padding:16px;font-size:13px}.loop b{display:block;color:var(--blue);margin-bottom:3px}
+.stack{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stackbox{padding:20px}.stackbox b{display:block;margin-bottom:9px}.stackbox span{display:inline-block;font-size:12px;color:var(--muted);margin:3px 7px 3px 0}
+.members{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.member{background:white;border:1px solid var(--line);border-radius:999px;padding:9px 13px;font-size:13px;font-weight:700}
+footer{padding:42px 0 56px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.note{font-size:12px;color:#8993a4;margin-top:16px}
+@media(max-width:820px){.links{display:none}.hero{grid-template-columns:1fr;padding-top:60px}h1{font-size:42px}.thesis,.grid,.metrics,.stack{grid-template-columns:1fr}.agent-grid{grid-template-columns:1fr}.hero-card{padding:25px}section{padding:54px 0}}
+</style>
+</head>
+<body>
+<nav><div class="navin"><a class="brand" href="#top">NOVA <span>TEAM</span></a><div class="links"><a href="#about">팀 소개</a><a href="#projects">프로젝트</a><a href="#approach">Agent Approach</a><a href="#stack">Tech Stack</a></div></div></nav>
+
+<main id="top">
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>N.O.V.A. 2026 · Team Portfolio</div>
+      <h1>근거를 찾고,<br>불확실성을 판단하고,<br>다음 행동을 결정하는 AI</h1>
+      <p class="lead">데이터 분석부터 LLM, RAG, AI Agent까지. 우리는 단순히 답을 생성하는 모델보다 <b>정보가 충분한지 판단하고 능동적으로 검증하는 시스템</b>을 만들어 왔습니다.</p>
+      <div class="members"><span class="member">김예나</span><span class="member">김재희</span><span class="member">강유진</span></div>
+    </div>
+    <aside class="hero-card">
+      <small>OUR AGENT MINDSET</small>
+      <h3>“지금 가진 정보로 충분한가?”를 매 턴 다시 묻습니다.</h3>
+      <div class="flow">
+        <div><b>01</b> 관찰된 정보 구조화</div>
+        <div><b>02</b> 가설 · 불확실성 갱신</div>
+        <div><b>03</b> 다음 질문 / 검색 / 검증 선택</div>
+        <div><b>04</b> 근거가 충분하면 종료</div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<section id="about"><div class="wrap">
+  <div class="kicker">About us</div>
+  <h2>실전형 에이전트 개발 팀</h2>
+  <p class="desc">안전사고 데이터 위험도 분석, LLM Agent workflow, 근거 기반 RAG, 신뢰도 기반 예측까지 다양한 문제를 다뤘습니다. 서로 다른 프로젝트를 관통하는 관심사는 하나입니다. <b>AI가 제한된 정보 속에서 무엇을 더 알아봐야 하는지 판단하고, 근거를 확인한 뒤 행동하게 만드는 것</b>입니다.</p>
+  <div class="thesis">
+    <div class="item"><span class="num">01</span><h3>Evidence Grounding</h3><p>검색된 근거와 데이터 안에서 답하도록 범위를 제한하고, 출처와 검증 단계를 시스템에 포함합니다.</p></div>
+    <div class="item"><span class="num">02</span><h3>Adaptive Reasoning</h3><p>고정된 질문 순서보다 현재 상태와 정보 부족 여부를 보고 다음 행동을 동적으로 결정합니다.</p></div>
+    <div class="item"><span class="num">03</span><h3>Uncertainty Aware</h3><p>모델이 언제 확신할 수 있는지 정량화하고, 불확실할 때 추가 정보 획득 또는 안전한 보류를 선택합니다.</p></div>
+  </div>
+  <div class="banner"><div><strong>이 경험을 Doctor Agent로 확장합니다.</strong><p>문진 → 진찰/검사 → 가설 갱신 → 근거 확인 → 종료 판단의 루프를 설계해, 제한된 턴 안에서 정확도뿐 아니라 정보 획득 효율성과 안전성까지 고려합니다.</p></div><span class="pill">ASK → EXAM / TEST → DIAGNOSE</span></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="kicker">Selected work</div>
+  <h2>관련 프로젝트</h2>
+  <p class="desc">N.O.V.A.의 핵심 과제인 정보 획득, 검색, 상태 관리, 불확실성 판단과 직접 연결되는 경험을 중심으로 정리했습니다.</p>
+  <div class="grid">
+    <article class="project">
+      <div class="tags"><span class="tag">Risk Modeling</span><span class="tag">RAG</span><span class="tag">LightGBM</span></div>
+      <h3>학교안전사고 위험도 분석 & RAG</h3>
+      <p>대규모 사고·보상 데이터를 위험도 모델링과 근거 검색 시스템으로 연결한 프로젝트.</p>
+      <ul class="bullets">
+        <li>2021–2025 학교안전사고 약 86만 건, 보상 데이터 약 52만 건 분석</li>
+        <li>빈도·심각도·고액사고 비율을 반영한 위험도 지표와 위험요인 분석</li>
+        <li>시간표·활동 맥락에 맞는 유사 사고 및 위험요인을 계층적 Lookup + RAG로 검색</li>
+        <li>검색 근거 안에서만 응답하도록 제한해 환각 감소</li>
+      </ul>
+    </article>
+
+    <article class="project">
+      <div class="tags"><span class="tag">LLM Agent</span><span class="tag">State</span><span class="tag">Planning</span></div>
+      <h3>목표 지향형 LLM AI Agent Workflow</h3>
+      <p>한 번의 생성이 아니라, 현재 상태를 보고 다음 행동을 선택하는 Agent 흐름을 구현.</p>
+      <ul class="bullets">
+        <li>자연어 입력 구조화 및 상태 저장</li>
+        <li>정보 부족 여부 판단과 추가 질문 생성</li>
+        <li>목표를 하위 task로 분해하고 실행 순서 결정</li>
+        <li>누적 정보를 기반으로 다음 action을 선택하는 서비스 흐름 연결</li>
+      </ul>
+    </article>
+
+    <article class="project">
+      <div class="tags"><span class="tag">RAG Chatbot</span><span class="tag">TypeScript</span><span class="tag">Next.js</span></div>
+      <h3>Histour · 역사 인물 AI 인터랙션</h3>
+      <p>역사 관광지를 선택형 스토리와 AI 대화로 경험하게 하는 웹 플랫폼.</p>
+      <ul class="bullets">
+        <li>역사 인물 대화, 선택지 기반 스토리 분기, 다국어 경험 설계</li>
+        <li>문화·관광 데이터를 서비스용 JSON으로 정제하고 검색/필터 구조 구현</li>
+        <li>Next.js · React · TypeScript 프론트엔드와 Node.js 백엔드</li>
+        <li>Vercel 배포까지 연결한 end-to-end 서비스 개발</li>
+      </ul>
+      <div class="linkrow"><a href="https://github.com/greenfield-2026-capstone/greenfield-project" target="_blank">GitHub ↗</a><a href="https://histour.vercel.app" target="_blank">Live Service ↗</a></div>
+    </article>
+
+    <article class="project">
+      <div class="tags"><span class="tag">Trustworthy AI</span><span class="tag">LLM Fusion</span><span class="tag">ICTC 2026</span></div>
+      <h3>ConFuse · LLM 신뢰도 기반 예측</h3>
+      <p>라이프로그 수면 상태 예측에서 샘플별 신뢰도에 따라 LLM과 GBDT의 기여도를 조절.</p>
+      <ul class="bullets">
+        <li>개인별 baseline과 최근 변화량을 반영한 LLM 추론</li>
+        <li>데이터 품질을 반영해 샘플별 LLM 활용도를 동적으로 결정</li>
+        <li>Log Loss 0.6415 · GBDT 0.6530 대비 개선</li>
+        <li>ICTC 2026 논문 채택</li>
+      </ul>
+    </article>
+
+    <article class="project">
+      <div class="tags"><span class="tag">Conformal Prediction</span><span class="tag">LLM Reliability</span><span class="tag">FastAPI</span></div>
+      <h3>한국어 허위정보 판별 & 불확실성 정량화</h3>
+      <p>LLM의 정답만 보는 대신 “언제 답을 신뢰할 수 있는가”를 중심으로 설계한 연구.</p>
+      <ul class="bullets">
+        <li>한국어 YouTube 자막 1,435건 기반 허위정보 판별</li>
+        <li>반복 LLM 추론 + Conformal Prediction + 근거 일관성 신뢰도</li>
+        <li>수용된 예측 정확도 88.8% · 전체 79.3% 대비 +9.5%p</li>
+        <li>React + FastAPI 웹서비스 및 사용자 평가까지 수행</li>
+      </ul>
+      <div class="linkrow"><a href="https://github.com/rladPsks/youtube-fakenews" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+    </article>
+
+    <article class="project">
+      <div class="tags"><span class="tag">Agentic RAG</span><span class="tag">Validation</span><span class="tag">Evidence</span></div>
+      <h3>FinSight · 근거 검증형 금융 Agent</h3>
+      <p>질문 라우팅부터 검색·근거 구성·응답 검증까지 수직 파이프라인으로 구현한 질의응답 Agent.</p>
+      <ul class="bullets">
+        <li>Router → Planner → Retrieval → Evidence → Generation → Validation</li>
+        <li>BM25 + Vector + RRF 기반 하이브리드 검색</li>
+        <li>Citation / Numeric Validation과 safe fallback 설계</li>
+        <li>응답 생성 이전에 근거 충분성을 확인하는 구조 구현</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="metrics">
+    <div class="stat"><b>86만+</b><span>학교안전사고 분석</span></div>
+    <div class="stat"><b>52만+</b><span>보상 데이터 분석</span></div>
+    <div class="stat"><b>+9.5%p</b><span>신뢰 예측 정확도 개선</span></div>
+    <div class="stat"><b>0.6415</b><span>ConFuse Log Loss</span></div>
+  </div>
+</div></section>
+
+<section id="approach"><div class="wrap">
+  <div class="agent">
+    <div class="agent-grid">
+      <div>
+        <div class="kicker">N.O.V.A. Approach</div>
+        <h2>Doctor Agent로<br>이어지는 설계 관점</h2>
+        <p class="desc" style="margin-bottom:0">초기 정보만으로 결론을 서두르지 않고, 매 턴 가설과 불확실성을 갱신합니다. 후보 질환을 구분하는 데 가치가 큰 질문·진찰·검사를 선택하고, RAG로 의학적 근거를 확인하며, 충분한 근거가 모이면 탐색을 종료하는 구조를 지향합니다.</p>
+      </div>
+      <div class="loop">
+        <div><b>STATE</b>증상·병력·검사 결과를 구조화해 누적</div>
+        <div><b>HYPOTHESIS</b>진단 후보와 불확실성을 동적으로 갱신</div>
+        <div><b>SELECT</b>후보를 가장 잘 구분할 다음 action 선택</div>
+        <div><b>GROUND</b>RAG로 의학적 근거와 판단을 연결</div>
+        <div><b>SAFETY</b>모순·위험 신호·근거 부족을 별도 점검</div>
+        <div><b>STOP</b>정보 가치가 낮아지면 탐색을 줄이고 진단</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="stack"><div class="wrap">
+  <div class="kicker">Capabilities</div><h2>기술 스택</h2>
+  <div class="stack">
+    <div class="stackbox"><b>AI / LLM</b><span>LLM Agent</span><span>RAG</span><span>Prompting</span><span>Uncertainty</span><span>Conformal Prediction</span></div>
+    <div class="stackbox"><b>ML / Data</b><span>Python</span><span>PyTorch</span><span>LightGBM</span><span>scikit-learn</span><span>Data Analysis</span></div>
+    <div class="stackbox"><b>Backend</b><span>FastAPI</span><span>Node.js</span><span>REST API</span><span>PostgreSQL</span></div>
+    <div class="stackbox"><b>Frontend / Deploy</b><span>React</span><span>Next.js</span><span>TypeScript</span><span>Vercel</span><span>GitHub</span></div>
+  </div>
+  <p class="note">본 포트폴리오는 팀의 관련 프로젝트 경험을 N.O.V.A. 2026의 대화형 의료 진단 Agent 문제와 연결해 요약한 페이지입니다.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap"><b>N.O.V.A. 2026 Team Portfolio</b><br>Evidence-grounded · uncertainty-aware · action-oriented AI systems</div></footer>
+</body>
+</html>
